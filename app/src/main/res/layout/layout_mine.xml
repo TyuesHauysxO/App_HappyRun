@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/user_name"
+        android:text="乐跑用户00154786"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignBottom="@id/user_name"
+        android:layout_toEndOf="@id/user_name"
+        android:src="@drawable/user_img" />
+
+    <View
+        android:id="@+id/divided_line1"
+        android:layout_below="@id/user_name"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="#CCCCCC"/>
+
+    <TextView
+        android:id="@+id/mine_change_pwd"
+        android:text="修改密码"
+        android:textSize="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/divided_line1"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        />
+
+    <View
+        android:id="@+id/divided_line2"
+        android:layout_below="@id/mine_change_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"/>
+
+    <TextView
+        android:id="@+id/mine_about"
+        android:text="关于"
+        android:textSize="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/divided_line2"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        />
+
+    <View
+        android:id="@+id/divided_line3"
+        android:layout_below="@id/mine_about"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"/>
+
+    <TextView
+        android:id="@+id/mine_contact"
+        android:text="联系我们"
+        android:textSize="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/divided_line3"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        />
+
+    <View
+        android:id="@+id/divided_line4"
+        android:layout_below="@id/mine_contact"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#CCCCCC"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:textColor="#fff"
+        android:textSize="17dp"
+        android:text="退 出 登 录"
+        android:layout_below="@id/divided_line4"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_boder"
+        android:layout_width="270dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
