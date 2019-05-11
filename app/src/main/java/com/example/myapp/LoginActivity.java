@@ -1,7 +1,6 @@
 package com.example.myapp;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,11 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity  implements View.OnClickListener{
-    Button login;
-    EditText name;
-    EditText pwd;
-    TextView enroll;
-    TextView forgetPwd;
+    private Button login;
+    private EditText name;
+    private EditText pwd;
+    private TextView enroll;
+    private TextView forgetPwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +35,18 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         login.setOnClickListener(this);
         enroll.setOnClickListener(this);
         forgetPwd.setOnClickListener(this);
+
+    }
+
+    @Override
+    protected void onStart() {
+        clearEditText();//清空输入栏
+        super.onStart();
+    }
+
+    private void clearEditText() {
+        name.setText("");
+        pwd.setText("");
     }
 
     @Override
@@ -48,13 +59,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         switch (v.getId()){
             case R.id.login:
                 if(TextUtils.isEmpty(strName)||TextUtils.isEmpty(strPwd)){
-                    new AlertDialog.Builder(LoginActivity.this).setTitle("错误")
-                            .setMessage("帐号或密码不能空").
-                            setPositiveButton("确定", null).show();
-
-                    Intent intentContent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intentContent);
-                    finish();
+                    Toast.makeText(LoginActivity.this, "用户名密码不能为空",
+                            Toast.LENGTH_SHORT).show();
                 }
                 else {
                     isMatch(strName, strPwd);
@@ -65,7 +71,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 startActivity(intentEnroll);
                 break;
             case R.id.forget_pwd:
-                Intent intentSetPwd = new Intent(LoginActivity.this, SetPwdActivity.class);
+                Intent intentSetPwd = new Intent(LoginActivity.this, ForgetPwdActivity.class);
                 startActivity(intentSetPwd);
                 break;
             default:
@@ -81,6 +87,13 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             Toast.makeText(LoginActivity.this, "登陆成功",
                     Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+
+            //用Bundle携带数据
+            Bundle bundle = new Bundle();
+            //传递name参数为用户名
+            bundle.putString("name", user.getName());
+            intent.putExtras(bundle);
+
             startActivity(intent);
         }
         else {

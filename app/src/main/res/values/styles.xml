@@ -1,11 +1,8 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="QMUI.Compat">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+
     </style>
 
     <style name="welcomeTheme" parent="QMUI.Compat">
@@ -16,5 +13,7 @@
         <!-- 隐藏状态栏 -->
         <item name="android:windowFullscreen">true</item>
     </style>
+
+
 
 </resources>

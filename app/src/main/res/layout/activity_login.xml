@@ -18,18 +18,18 @@
 
     <EditText
         android:id="@+id/login_user"
-        android:layout_width="230dp"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:hint=" 用户名"
         android:maxLines="1"
-        android:layout_marginTop="320dp"
-        android:layout_marginStart="105dp"
+        android:layout_marginTop="290dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/edittext_boder"
         />
 
     <EditText
         android:id="@+id/login_pwd"
-        android:layout_width="230dp"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:hint=" 密\u3000码"
         android:maxLines="1"

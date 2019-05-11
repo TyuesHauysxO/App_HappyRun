@@ -6,11 +6,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/*数据库操作
-* 1 插入
-* 2 查询
-* 3 修改
-* 4 删除
+/** 数据库基本操作
+*   1 插入
+*   2 查询
+*   3 修改
+*   4 删除
 * */
 public class UserDAO {
 

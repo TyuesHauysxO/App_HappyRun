@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ForgetPwdActivity">
 
+
+
     <EditText
-        android:id="@+id/enteruser"
+        android:id="@+id/alter_currentpwd"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:hint="\u3000输入用户名"
+        android:hint="\u3000当前密码"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -18,11 +21,12 @@
         />
 
     <EditText
-        android:id="@+id/enterpwd"
+        android:id="@+id/alter_enterpwd"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/enteruser"
+        android:layout_below="@id/alter_currentpwd"
         android:layout_marginTop="40dp"
-        android:hint="\u3000输入新密码"
+        android:hint="\u3000新密码(8-20位数字字母组合)"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -30,11 +34,12 @@
         />
 
     <EditText
-        android:id="@+id/enterpwd2"
+        android:id="@+id/alter_enterpwd2"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/enterpwd"
+        android:layout_below="@id/alter_enterpwd"
         android:layout_marginTop="40dp"
         android:hint="\u3000确认密码"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -42,12 +47,12 @@
         />
 
     <Button
-        android:id="@+id/set_pwd"
-        android:text="设置新密码"
+        android:id="@+id/alter_set_pwd"
+        android:text="确认修改"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/enterpwd2"
+        android:layout_below="@id/alter_enterpwd2"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_boder"
         android:textColor="#fff"

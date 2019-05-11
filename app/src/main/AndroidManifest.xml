@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapp">
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATIONa"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATIONa" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/user_img"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/user_img"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RunningActivity"></activity>
+        <activity android:name=".WeatherActivity"></activity>
+        <activity
+            android:name=".AlterPwdActivity"
+            android:label="修改密码" />
+        <activity
+            android:name=".RunningActivity"
+            android:label="运动" />
         <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait"
@@ -29,17 +36,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:launchMode="singleTask"/>
         <activity
-            android:name=".RulesActivity"
+            android:name=".MainActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".SetPwdActivity"
+            android:name=".RulesActivity"
+            android:label="用户隐私协议"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ForgetPwdActivity"
+            android:label="忘记密码"
             android:launchMode="singleTask" />
         <activity
             android:name=".EnrollActivity"
+            android:label="用户注册"
             android:launchMode="singleTask" />
-        <activity android:name=".LoginActivity" android:launchMode="singleTask"/>
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleTask" />
+
+        <service android:name=".AccelerometerSensorService" />
     </application>
 
 </manifest>

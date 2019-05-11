@@ -11,6 +11,8 @@ public class RulesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().hide();
+
         /*设置滚动条*/
         setContentView(R.layout.activity_rules);
 

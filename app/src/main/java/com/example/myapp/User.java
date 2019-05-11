@@ -1,5 +1,11 @@
 package com.example.myapp;
 
+/**
+ *
+ * User类  用户信息
+ *
+ * */
+
 public class User {
     private String name;
     private String pwd;

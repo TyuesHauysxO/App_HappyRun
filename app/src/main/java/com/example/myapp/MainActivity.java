@@ -14,21 +14,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView tvRun;
-    private TextView tvFind;
-    private TextView tvMine;
+     private TextView tvRun;
+     private TextView tvMine;
 
-    private Fragment fgRun;
-    private Fragment fgFind;
-    private Fragment fgMine;
-
-    private Button logOut;
-    private Button goRun;
-
-    private View vMine;
-    private View vFind;
-    private View vRun;
+     private Fragment fgRun;
+     private Fragment fgMine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().hide();
 
         tvRun = (TextView)findViewById(R.id.bar_run);
-        tvFind = (TextView)findViewById(R.id.bar_find);
         tvMine = (TextView)findViewById(R.id.bar_mine);
 
         tvRun.setOnClickListener(this);
-        tvFind.setOnClickListener(this);
         tvMine.setOnClickListener(this);
-        /*默认打开<我的>界面*/
-        tvMine.setSelected(true);
-        initFgMine();
+        /*默认打开<运动>界面*/
+        tvRun.setSelected(true);
+        initFgRun();
     }
 
 
@@ -57,11 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onStart() {
         super.onStart();
-        logOut = (Button)findViewById(R.id.logout);
-        goRun = (Button)findViewById(R.id.go_run);
-
-        logOut.setOnClickListener(this);
-//        goRun.setOnClickListener(this);
 
     }
 
@@ -73,11 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 resetSelected();
                 tvRun.setSelected(true);
                 initFgRun();
-                break;
-            case R.id.bar_find:
-                resetSelected();
-                tvFind.setSelected(true);
-                initFgFind();
                 break;
             case R.id.bar_mine:
                 resetSelected();
@@ -91,11 +72,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.LENGTH_SHORT ).show();
                 finish();
                 break;
-//            case R.id.go_run:
-//                Intent iGoRun = new Intent(MainActivity.this, RunningActivity.class);
-//                startActivity(iGoRun);
-//                break;
+            case R.id.go_run:
+                Intent iGoRun = new Intent(MainActivity.this, RunningActivity.class);
+                startActivity(iGoRun);
+                break;
         }
+    }
+
+    private String getUserName() {
+        //新页面接收数据
+        Bundle bundle = this.getIntent().getExtras();
+        //接收name值
+        String name = bundle.getString("name");
+
+        return name;
     }
 
     public void initFgRun(){
@@ -118,31 +108,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         transaction.commit();
     }
 
-    public void initFgFind(){
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        if(fgFind == null){
-            fgFind = new MyFragmentFind();
-
-            //添加 fragment
-            transaction.add(R.id.frame, fgFind);
-        }
-
-        //隐藏fragment
-        hideFragment(transaction);
-
-        //显示
-        transaction.show(fgFind);
-
-        /**提交事务**/
-        transaction.commit();
-    }
-
     public void initFgMine(){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         if(fgMine == null){
-            fgMine = new MyFragmentMine();
+            fgMine = new MyFragmentMine(getUserName());
 
             //添加 fragment
             transaction.add(R.id.frame, fgMine);
@@ -163,9 +133,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(fgRun != null){
             transaction.hide(fgRun);
         }
-        if(fgFind != null){
-            transaction.hide(fgFind);
-        }
         if(fgMine != null){
             transaction.hide(fgMine);
         }
@@ -174,9 +141,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void resetSelected(){
         if(tvRun != null){
             tvRun.setSelected(false);
-        }
-        if(tvFind != null){
-            tvFind.setSelected(false);
         }
         if(tvMine != null){
             tvMine.setSelected(false);

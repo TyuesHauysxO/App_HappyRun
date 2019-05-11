@@ -8,15 +8,28 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginTop="30dp"
-        android:src='@drawable/run_logo'
+        android:src='@drawable/run_logo_2'
         />
+
+    <Button
+        android:id="@+id/weather"
+        android:text="今日天气"
+        android:textSize="17dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_below="@id/run_logo"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_boder"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_height="40dp"/>
 
     <Button
         android:id="@+id/go_run"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_below="@id/run_logo"
-        android:layout_marginTop="220dp"
+        android:layout_below="@id/weather"
+        android:layout_marginTop="130dp"
         android:background="@drawable/bar_run"
         android:layout_centerHorizontal="true"
         android:text="G o !"
