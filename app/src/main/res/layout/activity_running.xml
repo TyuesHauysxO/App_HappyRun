@@ -54,17 +54,6 @@
             android:layout_width="0dp"
             android:layout_height="70dp" />
 
-        <TextView
-            android:id="@+id/calorie"
-            android:textSize="25dp"
-            android:singleLine="true"
-            android:textColor="#4F94CD"
-            android:layout_alignTop="@id/distance"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="70dp" />
-
     </LinearLayout>
 
 
@@ -93,14 +82,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-        <TextView
-            android:text="卡路里"
-            android:textSize="18dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-
     </LinearLayout>
 
 

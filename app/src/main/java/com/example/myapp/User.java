@@ -1,11 +1,5 @@
 package com.example.myapp;
 
-/**
- *
- * User类  用户信息
- *
- * */
-
 public class User {
     private String name;
     private String pwd;
@@ -13,13 +7,13 @@ public class User {
     public User(){
     }
 
-    public User(String user_name, String pwd){
+    public User(String name, String pwd){
         this.pwd = pwd;
-        this.name = user_name;
+        this.name = name;
     }
 
-    public void setName(String user_name){
-        this.name = user_name;
+    public void setName(String name){
+        this.name = name;
     }
 
     public void setPwd(String pwd){

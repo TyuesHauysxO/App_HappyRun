@@ -11,18 +11,24 @@
         android:src='@drawable/run_logo_2'
         />
 
-    <Button
+    <ImageView
+        android:src="@drawable/weather"
+        android:layout_alignTop="@id/weather"
+        android:layout_alignStart="@id/weather"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
         android:id="@+id/weather"
         android:text="今日天气"
-        android:textSize="17dp"
-        android:textColor="#fff"
-        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@drawable/on_press_weather"
+        android:gravity="center_vertical|end"
         android:layout_below="@id/run_logo"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button_boder"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_width="150dp"
-        android:layout_height="40dp"/>
+        android:layout_width="130dp"
+        android:layout_height="50dp"/>
 
     <Button
         android:id="@+id/go_run"
@@ -36,6 +42,7 @@
         android:textSize="20dp"
         android:textColor="#fff"
         />
+
 
 
 </RelativeLayout>

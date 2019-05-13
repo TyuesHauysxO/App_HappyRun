@@ -38,7 +38,6 @@ public class RunningActivity extends AppCompatActivity
     private int steps;//步数
     private float distance;//路程
     private float pace;//配速
-    private float calorie;//卡路里
 
 
     /*
@@ -70,14 +69,6 @@ public class RunningActivity extends AppCompatActivity
             pace = (float) (msPace * 3.6);
         }
 
-        if(pace > 1){
-            /*1小时慢跑消耗600大卡*/
-            calorie = (float) (1.0 * seconds / 60);
-        }
-        else {
-            calorie = 0;
-        }
-
         /*
         * 构造方法的字符格式这里如果小数不足2位,会以0补足
         * 格式化数据显示到小数点后两位
@@ -86,11 +77,9 @@ public class RunningActivity extends AppCompatActivity
         DecimalFormat decimalFormat =new DecimalFormat("0.00");
         String distanceString = decimalFormat.format(distance);
         String paceString = decimalFormat.format(pace);
-        String calorieString = decimalFormat.format(calorie);
 
         tvDistance.setText(distanceString);
         tvPace.setText(paceString);
-        tvCalorie.setText(calorieString);
     }
 
 
@@ -99,7 +88,6 @@ public class RunningActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_running);
 
-        tvCalorie = (TextView)findViewById(R.id.calorie);
         tvDistance = (TextView)findViewById(R.id.distance);
         tvPace = (TextView)findViewById(R.id.pace);
         cTimes = (Chronometer)findViewById(R.id.chronometer);
@@ -153,10 +141,8 @@ public class RunningActivity extends AppCompatActivity
         steps = 0;
         distance = 0;
         pace = 0;
-        calorie = 0;
         tvDistance.setText("0.0");
         tvPace.setText("0.0");
-        tvCalorie.setText("0.0");
         cTimes.setText("00:00:00");
     }
 

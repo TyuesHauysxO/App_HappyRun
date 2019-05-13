@@ -22,8 +22,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         String sql = "create table user (" +
                 "id integer primary key autoincrement," +
                 "name varchar(20)," +
-                "pwd varchar(20)" +
-                ")";
+                "pwd varchar(20))";
+
         db.execSQL(sql);
     }
 

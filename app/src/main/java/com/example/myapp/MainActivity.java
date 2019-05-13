@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -41,10 +42,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initFgRun();
     }
 
-
     /*
-    在Activity中无法直接使用fragment中的控件,需要复写onstart
-    */
+    *   捕捉返回键，按下返回桌面
+    * */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            Intent home = new Intent(Intent.ACTION_MAIN);
+            home.addCategory(Intent.CATEGORY_HOME);
+            startActivity(home);
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
