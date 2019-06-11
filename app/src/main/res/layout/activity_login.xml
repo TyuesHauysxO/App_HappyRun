@@ -10,75 +10,77 @@
 
 
     <ImageView
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/dp_40"
         android:layout_centerHorizontal="true"
         android:src="@drawable/login"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_140" />
 
     <EditText
         android:id="@+id/login_user"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_40"
         android:hint=" 用户名"
+        android:textSize="@dimen/dp_14"
         android:maxLines="1"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="@dimen/dp_250"
         android:layout_centerHorizontal="true"
         android:background="@drawable/edittext_boder"
         />
 
     <EditText
         android:id="@+id/login_pwd"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_40"
         android:hint=" 密\u3000码"
+        android:textSize="@dimen/dp_14"
         android:maxLines="1"
         android:inputType="textPassword"
         android:layout_below="@id/login_user"
         android:layout_alignStart="@id/login_user"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/dp_40"
         android:background="@drawable/edittext_boder"
         />
 
     <ImageView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_8"
         android:layout_alignStart="@id/img_pwd"
         android:layout_alignTop="@id/login_user"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/dp_23"
+        android:layout_height="@dimen/dp_23"
         android:src="@drawable/login_user" />
 
     <ImageView
         android:id="@+id/img_pwd"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/dp_23"
+        android:layout_height="@dimen/dp_23"
         android:layout_alignTop="@id/login_pwd"
-        android:layout_toStartOf="@id/login_pwd"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
+        android:layout_alignEnd="@id/login_user"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_5"
         android:src="@drawable/login_pwd" />
 
     <TextView
         android:id="@+id/enroll"
         android:text="新用户注册"
-        android:textSize="15dp"
+        android:textSize="@dimen/dp_12"
         android:textColor="@drawable/textview_background"
         android:layout_alignStart="@id/login_pwd"
         android:layout_below="@id/login_pwd"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/forget_pwd"
-        android:text="忘记密码"
-        android:textSize="15dp"
+        android:text="忘记密码？"
+        android:textSize="@dimen/dp_12"
         android:textColor="@drawable/textview_background"
         android:layout_alignEnd="@id/login_pwd"
         android:layout_below="@id/login_pwd"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -86,12 +88,12 @@
         android:id="@+id/login"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/enroll"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/dp_50"
         android:text="登\u3000\u3000\u3000陆"
         android:textColor="#fff"
-        android:textSize="18dp"
-        android:layout_width="270dp"
-        android:layout_height="50dp"
+        android:textSize="@dimen/dp_16"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_40"
         android:background="@drawable/button_boder"
         />
 

@@ -6,8 +6,8 @@
     <ImageView
         android:id="@+id/run_logo"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_30"
         android:src='@drawable/run_logo_2'
         />
 
@@ -15,31 +15,31 @@
         android:src="@drawable/weather"
         android:layout_alignTop="@id/weather"
         android:layout_alignStart="@id/weather"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40" />
 
     <TextView
         android:id="@+id/weather"
         android:text="今日天气"
-        android:textSize="20dp"
+        android:textSize="@dimen/dp_16"
         android:textColor="@drawable/on_press_weather"
         android:gravity="center_vertical|end"
         android:layout_below="@id/run_logo"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_30"
         android:layout_centerHorizontal="true"
-        android:layout_width="130dp"
-        android:layout_height="50dp"/>
+        android:layout_width="@dimen/dp_105"
+        android:layout_height="@dimen/dp_40"/>
 
     <Button
         android:id="@+id/go_run"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
         android:layout_below="@id/weather"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="@dimen/dp_120"
         android:background="@drawable/bar_run"
         android:layout_centerHorizontal="true"
         android:text="G o !"
-        android:textSize="20dp"
+        android:textSize="@dimen/dp_18"
         android:textColor="#fff"
         />
 

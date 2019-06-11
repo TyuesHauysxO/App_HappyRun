@@ -9,19 +9,19 @@
     <Chronometer
         android:id="@+id/chronometer"
         android:gravity="center"
-        android:textSize="40dp"
+        android:textSize="@dimen/dp_35"
         android:textColor="#4F94CD"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/dp_50"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="@dimen/dp_80" />
 
     <TextView
         android:id="@+id/total_time"
         android:text="时长"
         android:layout_below="@id/chronometer"
         android:layout_marginTop="5dp"
-        android:textSize="18dp"
+        android:textSize="@dimen/dp_15"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -29,30 +29,30 @@
     <LinearLayout
         android:id="@+id/run_record"
         android:layout_below="@id/total_time"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_25"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/distance"
-            android:textSize="25dp"
+            android:textSize="@dimen/dp_28"
             android:singleLine="true"
             android:textColor="#4F94CD"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="70dp" />
+            android:layout_height="@dimen/dp_70" />
 
         <TextView
             android:id="@+id/pace"
-            android:textSize="25dp"
+            android:textSize="@dimen/dp_28"
             android:singleLine="true"
             android:textColor="#4F94CD"
             android:layout_alignTop="@id/distance"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="70dp" />
+            android:layout_height="@dimen/dp_70" />
 
     </LinearLayout>
 
@@ -67,7 +67,7 @@
 
         <TextView
             android:text="路程(km)"
-            android:textSize="18dp"
+            android:textSize="@dimen/dp_15"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -76,8 +76,8 @@
 
 
         <TextView
-            android:text="配速(km/h)"
-            android:textSize="18dp"
+            android:text="时速(km/h)"
+            android:textSize="@dimen/dp_15"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -88,28 +88,28 @@
     <Button
         android:id="@+id/run_control"
         android:text="开始"
-        android:textSize="20dp"
+        android:textSize="@dimen/dp_17"
         android:background="@drawable/bar_run"
         android:textColor="#fff"
         android:layout_below="@id/run_title"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/dp_90"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="55dp"
-        android:layout_width="110dp"
-        android:layout_height="110dp" />
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90" />
 
     <Button
         android:id="@+id/run_reset"
         android:text="重置"
-        android:textSize="20dp"
+        android:textSize="@dimen/dp_17"
         android:background="@drawable/bar_run_reset"
         android:textColor="#fff"
         android:layout_below="@id/run_title"
-        android:layout_marginTop="100dp"
+        android:layout_alignTop="@id/run_control"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="55dp"
-        android:layout_width="110dp"
-        android:layout_height="110dp" />
+        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90" />
 
 
 

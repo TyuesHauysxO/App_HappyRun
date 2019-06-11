@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapp">
+    package="com.example.activity">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -12,7 +12,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.BODY_SENSORS" />
 
-    <!--9.0会对未加密的网络流量受限-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/user_img"
@@ -21,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WeatherActivity"></activity>
+        <activity android:name=".WeatherActivity" />
         <activity
             android:name=".AlterPwdActivity"
             android:label="修改密码"
@@ -59,7 +58,7 @@
             android:name=".LoginActivity"
             android:launchMode="singleTask" />
 
-        <service android:name=".AccelerometerSensorService" />
+        <service android:name="com.example.service.AccelerometerSensorService" />
     </application>
 
 </manifest>
